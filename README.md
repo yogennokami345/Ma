@@ -1,66 +1,202 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
-
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+  <a href="#"><img src="https://img.shields.io/badge/version-1.0.0-blue.svg" alt="Version"></a>
+  <a href="#"><img src="https://img.shields.io/badge/license-MIT-green.svg" alt="License"></a>
+  <a href="#"><img src="https://img.shields.io/badge/open%20source-❤️-red.svg" alt="Open Source"></a>
+  <a href="#"><img src="https://img.shields.io/badge/bun-powered-ff69b4.svg" alt="Bun Powered"></a>
 </p>
 
-## About Laravel
+# 📚 Nuva
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+**Nuva** is a modern and open source online reader for comics and ebooks. Designed with performance and user experience in mind, Nuva provides a seamless reading experience with advanced features for managing and enjoying your digital library.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## ✨ Key Features
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- 📖 **Online Reading**: Smooth and responsive interface for reading comics and ebooks
+- 🗂️ **Library Management**: Organize and manage your collection with ease
+- 🌐 **Multi-format Support**: Supports popular formats like PDF, EPUB, CBZ, and CBR
+- 🔍 **Search and Filter**: Powered by Meilisearch for fast and accurate results
+- 🎨 **Customizable Themes**: Light and dark modes with ShadCN Vue components
+- 📊 **Reading Progress**: Track your progress across multiple books
+- ⚡ **Optimized Performance**: Redis caching and efficient database queries
+- 📱 **Responsive Design**: Works perfectly on desktops, tablets, and mobile devices
 
-## Learning Laravel
+## 🛠️ Tech Stack
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### Backend
+- **Laravel** - Modern and elegant PHP framework
+- **Inertia.js** - Seamless server-side rendering with Vue.js
+- **Redis** - High-performance caching
+- **PostgreSQL** - Relational database
+- **Meilisearch** - Lightning-fast search engine
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+### Frontend
+- **Vue.js** - Reactive JavaScript framework
+- **ShadCN Vue** - Accessible and customizable UI components
+- **Tailwind CSS** - Utility-first CSS framework
+- **Filament** - Modern admin panel for managing the application
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Development Tools
+- **Bun** - Ultra-fast JavaScript runtime and package manager
+- **Makefile** - Simplified development commands
+- **Vite** - Modern build tool
+- **Composer** - PHP dependency manager
 
-## Laravel Sponsors
+## 📋 Prerequisites
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+- PHP >= 8.1
+- Composer
+- Bun >= 1.0.0
+- PostgreSQL >= 12
+- Redis >= 6.0
+- Meilisearch >= 1.0
 
-### Premium Partners
+## 🛠️ Installation
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+1. **Clone the repository**
+```bash
+git clone https://github.com/YanEmmanuel/nuva.git
+cd nuva
+```
 
-## Contributing
+2. **Install PHP dependencies**
+```bash
+composer install
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+3. **Install JavaScript dependencies with Bun**
+```bash
+bun install
+```
 
-## Code of Conduct
+4. **Environment setup**
+```bash
+cp .env.example .env
+php artisan key:generate
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+5. **Database and search configuration**
+```bash
+# Edit .env file with your PostgreSQL, Redis, and Meilisearch credentials
+php artisan migrate --seed
+```
 
-## Security Vulnerabilities
+6. **Build assets**
+```bash
+bun run build
+# or for development
+bun run dev
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+7. **Start the application**
+```bash
+make up
+```
 
-## License
+8. **Start the frontend in development mode**
+```bash
+make dev
+```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Access `http://localhost:8000` in your browser.
+
+## 🎮 Basic Usage
+
+### Adding Comics/Ebooks
+
+1. Upload your files through the admin panel (`/admin`).
+2. Organize your library by categories, tags, or series.
+3. Start reading directly from your browser.
+
+### Reading Features
+
+- **Zoom and Pan**: Adjust the view for comics and images.
+- **Bookmarks**: Save your favorite pages for quick access.
+- **Reading Modes**: Single page, double page, or continuous scrolling.
+
+### Admin Panel
+
+Manage your library, users, and system settings through the intuitive admin interface.
+
+## 🔧 Advanced Configuration
+
+### Supported Formats
+
+```php
+// config/nuva.php
+return [
+    'supported_formats' => ['pdf', 'epub', 'cbz', 'cbr'],
+    'max_upload_size' => 100, // in MB
+    'thumbnail_generation' => true,
+];
+```
+
+### Custom Themes
+
+```javascript
+// resources/js/theme-config.js
+const themeConfig = {
+    defaultTheme: 'dark',
+    availableThemes: ['light', 'dark', 'sepia'],
+    fontSize: 16,
+    lineHeight: 1.5,
+};
+```
+
+## 📚 Documentation
+
+- [Installation Guide](docs/installation.md)
+- [API Reference](docs/api.md)
+- [Developer Guide](docs/developer-guide.md)
+- [Usage Examples](docs/examples.md)
+- [FAQ](docs/faq.md)
+
+## 🤝 Contributing
+
+**Nuva is 100% open source!** Contributions are very welcome. Please read our [contribution guide](CONTRIBUTING.md) before submitting your PR.
+
+### How to Contribute
+
+1. Fork the project
+2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+### Types of Contributions
+
+- 🐛 Bug fixes
+- ✨ New features
+- 📝 Documentation improvements
+- 🎨 Interface enhancements
+- ⚡ Performance optimizations
+- 🧪 Automated tests
+
+<!-- ## 🔒 Security
+
+If you discover a security vulnerability, please send an email to security@nuva.dev. All security vulnerabilities will be promptly investigated and resolved. -->
+
+## 📄 License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+---
+
+MIT License
+
+Copyright (c) 2025 Yan Emmanuel
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+---
+
+<p align="center">
+  <b>⭐ If this project helped you, consider giving it a star!</b>
+</p>
+
+<p align="center">
+  Made with ❤️ by the open source community
+</p>
