@@ -1,0 +1,36 @@
+{
+    "status": [
+      {
+        "nome": "Em andamento",
+        "descricao": "O projeto ou tarefa está atualmente em desenvolvimento ou execução."
+      },
+      {
+        "nome": "Concluído",
+        "descricao": "O projeto ou tarefa foi finalizado com sucesso."
+      },
+      {
+        "nome": "DMCA",
+        "descricao": "O projeto ou conteúdo foi removido ou bloqueado devido a uma notificação DMCA."
+      },
+      {
+        "nome": "Cancelado",
+        "descricao": "O projeto ou tarefa foi cancelado e não será concluído."
+      },
+      {
+        "nome": "Pendente",
+        "descricao": "O projeto ou tarefa está aguardando aprovação ou início."
+      },
+      {
+        "nome": "Em revisão",
+        "descricao": "O projeto ou tarefa está sendo revisado para garantir a qualidade."
+      },
+      {
+        "nome": "Pausado",
+        "descricao": "O projeto ou tarefa foi temporariamente interrompido."
+      },
+      {
+        "nome": "Arquivado",
+        "descricao": "O projeto ou tarefa foi arquivado para referência futura."
+      }
+    ]
+  }
